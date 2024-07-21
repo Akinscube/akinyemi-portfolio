@@ -16,11 +16,12 @@ const Contact = () => {
           amount: 0.5,
         },
         scrollTrigger: {
-          trigger: '.line',
-          start: "bottom bottom",
-          end: "top 0",
+          trigger: text,
+          start: "top 80%",
+          end: "top 20%",
           scrub: true,
-          // markers: true,
+        //   markers: true,
+          invalidateOnRefresh: true,
         },
       });
     });

@@ -17,10 +17,11 @@ const AboutMe = () => {
         },
         scrollTrigger: {
           trigger: text,
-          start: "bottom bottom",
+          start: "top 80%",
           end: "top 20%",
           scrub: true,
           // markers: true,
+          invalidateOnRefresh: true,
         },
       });
     });
@@ -35,7 +36,7 @@ const AboutMe = () => {
           <p className="font-tnr opacity-100 !text-[16px] italic">
             What you can expect from me:
           </p>
-          <div className="mb-32 fs-4rm mt-8 about-me-title text-reveal">
+          <div className="mb-32 fs-4rm mt-8 about-me-title am-text text-reveal">
             {isXsScreen ? (
               <>
                 <div className="am-reveal reveal relative block">

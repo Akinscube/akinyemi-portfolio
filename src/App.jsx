@@ -10,6 +10,7 @@ import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { animateScroll as scroll } from 'react-scroll';
 
 
 
@@ -91,6 +92,13 @@ const App = () => {
 
   }, {scope: appRef})
 
+
+  useEffect(() => {
+    scroll.scrollToTop({
+      duration: 3000,
+      smooth: true
+    });
+  },[])
 
   return (
     <div className="App" ref={appRef}>
