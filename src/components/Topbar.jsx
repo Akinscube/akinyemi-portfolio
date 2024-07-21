@@ -100,8 +100,8 @@ const Topbar = () => {
             <div className={`menu-mb-main ${mobileActive ? 'active' : ''}`}>
                 <p className="font-tnr italic text-[12.8px] mt-0 mb-2">Sitemap:</p>
                 <ul>
-                    <li className=""><a href="#about-me" className="menu-mb-item">About me</a></li>
-                    <li className=""><a href="#projects" className="menu-mb-item">Projects</a></li>
+                    <li className=""><a href="#about-me" onClick={() => setMobileActive(false)} className="menu-mb-item">About me</a></li>
+                    <li className=""><a href="#projects" onClick={() => setMobileActive(false)} className="menu-mb-item">Projects</a></li>
                 </ul>
             </div>
             <div id="menu-mb-bottom" className="">
