@@ -8,7 +8,7 @@ const AboutMe = () => {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
   useGSAP(() => {
-    const texts = gsap.utils.toArray(".reveal");
+    const texts = gsap.utils.toArray(".am-reveal");
     texts.forEach((text) => {
       gsap.to(text, {
         backgroundPositionX: "0%",
@@ -38,48 +38,48 @@ const AboutMe = () => {
           <div className="mb-32 fs-4rm mt-8 about-me-title text-reveal">
             {isXsScreen ? (
               <>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   I am a versatile professional skilled in
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   software development and creative
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   design. With expertise in TypeScript,
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   JavaScript, React, and Node.js,
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   I specialize in creating efficient,
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   scalable, and user-friendly solutions.
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   Explore my portfolio to see how we
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   can achieve your goals together!
                 </div>
               </>
             ) : (
               <>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   I am a versatile professional skilled in software development
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   and creative design. With expertise in TypeScript, JavaScript,
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   React, and Node.js, I specialize in creating efficient,
                   scalable,
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   and user-friendly solutions. Explore my portfolio to see how
                   we
                 </div>
-                <div className="reveal relative block">
+                <div className="am-reveal reveal relative block">
                   can achieve your goals together!
                 </div>
               </>
