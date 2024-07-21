@@ -1,14 +1,14 @@
 import React from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "@mui/material";
 
 const AboutMe = () => {
-  gsap.registerPlugin(ScrollTrigger, useGSAP);
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
 
   useGSAP(() => {
-    const texts = gsap.utils.toArray(".am-reveal");
+    const texts = gsap.utils.toArray(".reveal");
     texts.forEach((text) => {
       gsap.to(text, {
         backgroundPositionX: "0%",
@@ -16,7 +16,7 @@ const AboutMe = () => {
           amount: 0.5,
         },
         scrollTrigger: {
-          trigger: '.am-text-reveal',
+          trigger: text,
           start: "bottom bottom",
           end: "top 20%",
           scrub: true,
@@ -35,51 +35,51 @@ const AboutMe = () => {
           <p className="font-tnr opacity-100 !text-[16px] italic">
             What you can expect from me:
           </p>
-          <div className="mb-32 fs-4rm mt-8 about-me-title am-text-reveal text-reveal">
+          <div className="mb-32 fs-4rm mt-8 about-me-title text-reveal">
             {isXsScreen ? (
               <>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   I am a versatile professional skilled in
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   software development and creative
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   design. With expertise in TypeScript,
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   JavaScript, React, and Node.js,
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   I specialize in creating efficient,
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   scalable, and user-friendly solutions.
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   Explore my portfolio to see how we
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   can achieve your goals together!
                 </div>
               </>
             ) : (
               <>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   I am a versatile professional skilled in software development
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   and creative design. With expertise in TypeScript, JavaScript,
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   React, and Node.js, I specialize in creating efficient,
                   scalable,
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   and user-friendly solutions. Explore my portfolio to see how
                   we
                 </div>
-                <div className="am-reveal reveal relative block">
+                <div className="reveal relative block">
                   can achieve your goals together!
                 </div>
               </>
