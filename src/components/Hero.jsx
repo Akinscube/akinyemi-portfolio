@@ -12,7 +12,7 @@ const Hero = () => {
         <div className={`${styles.paddingX}`}>
           <div className="flex justify-between items-end">
             <div className="hero-title">
-              Frontend <br /> Developer
+              Frontend <br /> Engineer
             </div>
             <div className="hero-desc text-white d-none d-xl-block">
               <div>
