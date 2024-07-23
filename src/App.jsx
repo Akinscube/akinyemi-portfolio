@@ -103,7 +103,6 @@ const App = () => {
   return (
     <div className="App" ref={appRef}>
       <div className="loader w-full">
-        <div className="loader-gradient" />
         <img className="loader-text" src='https://res.cloudinary.com/do7ow1whq/image/upload/v1721385902/akinsdev_new2_jdhr88.svg' />
       </div>
       <div className="overlay w-full">

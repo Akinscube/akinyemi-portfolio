@@ -1,3 +1,4 @@
+import { cdr, css, framerMotion, git, html, javaScript, lrc, mui, nextjs, nodejs, ps, reactjs, redux, restApi, sass, tailwind, threejs, typeScript } from "../assets"
 
 const projects = [
     {
@@ -24,5 +25,7 @@ const projects = [
     },
 ]
 
+const techs = [reactjs, nextjs, restApi, redux, tailwind, git, typeScript, mui, framerMotion, threejs, nodejs, javaScript, sass, css, html, ps, lrc, cdr]
 
-export {projects}
+
+export {projects, techs}

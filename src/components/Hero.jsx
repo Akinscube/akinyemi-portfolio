@@ -1,6 +1,8 @@
 import React from "react";
 import { styles } from "../styles";
 import Marquee from "react-fast-marquee";
+import SkillsParallax from "./SkillsParallax";
+import { gitHub, twitter, whatsApp } from "../assets";
 
 const Hero = () => {
 
@@ -24,18 +26,18 @@ const Hero = () => {
                 <a className="hover:underline" href="tel:+2348130341622">(+234)8130341622</a>
               </div>
               <div className="social-list">
-                <a className="hover:underline relative inline-block" href="http://">
-                  <span className="hover-animation-word">GitHub</span>
+                <a className="hover:underline relative inline-block" target='_blank' href="https://github.com/Akinscube">
+                  <img src={gitHub} className="hover-animation-word max-h-[20px]" alt="GitHub" />
                 </a>
               </div>
               <div className="social-list">
-                <a className="hover:underline relative inline-block" href="http://">
-                  <span className="hover-animation-word">WhatsApp</span>
+                <a className="hover:underline relative inline-block" target='_blank' href="https://wa.me/8130341622">
+                <img src={whatsApp} className="hover-animation-word max-h-[20px]" alt="WhatsApp" />
                 </a>
               </div>
               <div className="social-list">
-                <a className="hover:underline relative inline-block" href="http://">
-                  <span className="hover-animation-word">X</span>
+                <a className="hover:underline relative inline-block" target='_blank' href="https://x.com/akins_devs">
+                <img src={twitter} className="hover-animation-word max-h-[20px]" alt="X" />
                 </a>
               </div>
             </div>
@@ -45,7 +47,8 @@ const Hero = () => {
       <div id="hero-marquee" className="">
         <div className="hero-marquee">
           <div className="hero-marquee-inner text-[#fff]">
-            <Marquee pauseOnHover={true} speed={90} >
+            <SkillsParallax />
+            {/* <Marquee pauseOnHover={true} speed={90} >
                 <ul className="marquee-container">
             {marqueeItems.map((item, index) => (
                 <React.Fragment key={index}>
@@ -55,7 +58,7 @@ const Hero = () => {
         </React.Fragment>
       ))}</ul>
               
-            </Marquee>
+            </Marquee> */}
           </div>
         </div>
       </div>

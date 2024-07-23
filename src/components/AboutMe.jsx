@@ -3,29 +3,49 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "@mui/material";
+import { motion } from "framer-motion";
+import useScrollAnimation from "../../utils/useScrollFillAnimation";
 
 const AboutMe = () => {
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
+  const { containerRef: containerRef1, bgValue: bgValue1 } =
+    useScrollAnimation();
+  const { containerRef: containerRef2, bgValue: bgValue2 } =
+    useScrollAnimation();
+  const { containerRef: containerRef3, bgValue: bgValue3 } =
+    useScrollAnimation();
+  const { containerRef: containerRef4, bgValue: bgValue4 } =
+    useScrollAnimation();
+  const { containerRef: containerRef5, bgValue: bgValue5 } =
+    useScrollAnimation();
+  const { containerRef: containerRef6, bgValue: bgValue6 } =
+    useScrollAnimation();
+  const { containerRef: containerRef7, bgValue: bgValue7 } =
+    useScrollAnimation();
+  const { containerRef: containerRef8, bgValue: bgValue8 } =
+    useScrollAnimation();
 
-  useGSAP(() => {
-    const texts = gsap.utils.toArray(".am-reveal");
-    texts.forEach((text) => {
-      gsap.to(text, {
-        backgroundPositionX: "0%",
-        stagger: {
-          amount: 0.5,
-        },
-        scrollTrigger: {
-          trigger: text,
-          start: "top 80%",
-          end: "top 20%",
-          scrub: true,
-          // markers: true,
-          invalidateOnRefresh: true,
-        },
-      });
-    });
-  });
+
+  // gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+  // useGSAP(() => {
+  //   const texts = gsap.utils.toArray(".am-reveal");
+  //   texts.forEach((text) => {
+  //     gsap.to(text, {
+  //       backgroundPositionX: "0%",
+  //       stagger: {
+  //         amount: 0.5,
+  //       },
+  //       scrollTrigger: {
+  //         trigger: text,
+  //         start: "top 80%",
+  //         end: "top 20%",
+  //         scrub: true,
+  //         // markers: true,
+  //         invalidateOnRefresh: true,
+  //       },
+  //     });
+  //   });
+  // });
 
   const isXsScreen = useMediaQuery("(max-width:768px)");
 
@@ -33,60 +53,72 @@ const AboutMe = () => {
     <div id="about-me" className="reveal-container">
       <div className="pt-48 bg-white relative mt-[-1px] ">
         <div className="!mb-[7.8rem] custom-container">
+          <motion.div
+          initial={{opacity: 0, x: -50}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration:2, ease:'easeInOut'}}
+          viewport={{ once: true }}
+          >
           <p className="font-tnr opacity-100 !text-[16px] italic">
             What you can expect from me:
           </p>
           <div className="mb-32 fs-4rm mt-8 about-me-title am-text text-reveal">
             {isXsScreen ? (
               <>
-                <div className="am-reveal reveal relative block">
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue1 }} ref={containerRef1} className="am-reveal reveal relative block">
                   I am a versatile professional skilled in
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue2 }} ref={containerRef2} className="am-reveal reveal relative block">
                   software development and creative
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue3 }} ref={containerRef3} className="am-reveal reveal relative block">
                   design. With expertise in TypeScript,
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue4 }} ref={containerRef4} className="am-reveal reveal relative block">
                   JavaScript, React, and Node.js,
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue5 }} ref={containerRef5} className="am-reveal reveal relative block">
                   I specialize in creating efficient,
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue6 }} ref={containerRef6} className="am-reveal reveal relative block">
                   scalable, and user-friendly solutions.
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue7 }} ref={containerRef7} className="am-reveal reveal relative block">
                   Explore my portfolio to see how we
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue8 }} ref={containerRef8} className="am-reveal reveal relative block">
                   can achieve your goals together!
-                </div>
+                </motion.div>
               </>
             ) : (
               <>
-                <div className="am-reveal reveal relative block">
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue1 }} ref={containerRef1} className="am-reveal reveal relative block">
                   I am a versatile professional skilled in software development
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue2 }} ref={containerRef2} className="am-reveal reveal relative block">
                   and creative design. With expertise in TypeScript, JavaScript,
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue3 }} ref={containerRef3} className="am-reveal reveal relative block">
                   React, and Node.js, I specialize in creating efficient,
                   scalable,
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue4 }} ref={containerRef4} className="am-reveal reveal relative block">
                   and user-friendly solutions. Explore my portfolio to see how
                   we
-                </div>
-                <div className="am-reveal reveal relative block">
+                </motion.div>
+                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue5 }} ref={containerRef5} className="am-reveal reveal relative block">
                   can achieve your goals together!
-                </div>
+                </motion.div>
               </>
             )}
           </div>
+          </motion.div>
           <div id="about-me-services">
+            <motion.div
+          initial={{opacity: 0, x: -50}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration:2.5, ease:'easeInOut'}}
+          viewport={{ once: true }}>
             <div className="about-me-services">
               <div className="row">
                 <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -131,6 +163,7 @@ const AboutMe = () => {
                 </div>
               </div>
             </div>
+            </motion.div>
           </div>
         </div>
       </div>

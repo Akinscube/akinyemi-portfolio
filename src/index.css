@@ -270,7 +270,7 @@ h1 {
 
 .hero-content {
   position: absolute;
-  bottom: 2.6rem;
+  bottom: 4rem;
   left: 0;
   width: 100%;
   z-index: 8;
@@ -294,14 +294,14 @@ h1 {
   position: relative;
 }
 
-.social-list:not(:last-child):after {
+/* .social-list:not(:last-child):after {
   content: ",";
   position: absolute;
   right: -0.325rem;
-}
+} */
 
 .social-list:not(:last-child) {
-  margin-right: 0.5rem;
+  margin-right: 1.5rem;
 }
 
 .hero-marquee {
@@ -370,6 +370,38 @@ h1 {
   background: #fff;
   border-radius: 100%;
 }
+
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 30px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
+}
+
+.parallax img {
+  max-height: 27px;
+  filter: grayscale(0.8);
+}
+
 
 .custom-container {
   max-width: 1200px;
@@ -1061,24 +1093,24 @@ h1 {
     min-height: 660px;
   }
 
-  .project-item .d-lg-block .project-desc {
+  .project-item .d-lg-block .project-description {
     max-width: 70%;
   }
 
   .touch-contact #social ul li {
     position: relative;
-    margin-left: 0.5rem;
+    margin-left: 1.5rem;
   }
 
   .touch-contact #social ul li:first-child {
     margin-left: 0;
   }
 
-  .touch-contact #social ul li:not(:last-child):after {
+  /* .touch-contact #social ul li:not(:last-child):after {
     content: ",";
     position: absolute;
     right: -0.325rem;
-  }
+  } */
 
 
 }

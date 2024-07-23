@@ -1,6 +1,7 @@
 import React from "react";
 import { styles } from "../styles";
 import LocomotiveScroll from "locomotive-scroll";
+import { motion } from "framer-motion";
 
 const Project = ({ project }) => {
   return (
@@ -11,7 +12,10 @@ const Project = ({ project }) => {
             <div className="row">
               <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block">
                 <div className="project-item-wrap">
-                  <div className="relative">
+                  <motion.div initial={{opacity: 0, x: -50}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration:2.5, ease:'easeInOut'}}
+          viewport={{ once: true }} className="relative">
                     <div className="project-name fs-4rm">{project.name}</div>
                     <div className="project-description">
                       <p className="m-0">{project.description}</p>
@@ -36,8 +40,11 @@ const Project = ({ project }) => {
                         </li>
                       </ul>
                     </div>
-                  </div>
-                  <div className="project-btn fs-4rm akin-btn">
+                  </motion.div>
+                  <motion.div initial={{opacity: 0, x: -50}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration:2.5, ease:'easeInOut'}}
+          viewport={{ once: true }} className="project-btn fs-4rm akin-btn">
                     <span className="fw-400 ">Visit site</span>
                     <a target="_blank" href={project.liveUrl}>
                       <span className="akin-btn-icon ml-[1.95rem] magnetic">
@@ -61,7 +68,7 @@ const Project = ({ project }) => {
                         </div>
                       </span>
                     </a>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
               <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
