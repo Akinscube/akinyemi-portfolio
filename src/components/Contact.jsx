@@ -76,7 +76,7 @@ const { containerRef: containerRef1, bgValue: bgValue1 } =
                                         </a>
                                     </li>
                                     <li>
-                                        <a >target='_blank' href="https://x.com/akins_devs"
+                                        <a target='_blank' href="https://x.com/akins_devs" >
                                         <img className='max-h-[20px]' src={twitterBlack} alt="X" />
                                         </a>
                                     </li>
