@@ -28,7 +28,7 @@ const App = () => {
         orientation: 'vertical',
         gestureOrientation: 'vertical',
         smoothWheel: true,
-        smoothTouch: false,
+        smoothTouch: true,
         wheelMultiplier: 1,
         touchMultiplier: 2,
         normalizeWheel: true,

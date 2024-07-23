@@ -1166,7 +1166,7 @@ h1 {
     padding-bottom: 6rem;
 }
 
-.touch-contact #social ul li:not(:last-child) {
+.touch-contact #social ul li:not() {
   margin-bottom: 2rem;
 }
 }
