@@ -75,7 +75,7 @@ export default function SkillsParallax() {
     <section>
       <ParallaxText baseVelocity={5}>
         <div className="flex gap-16">{techs.map(tech => (
-            <img src={tech} className="max-h-[27px]" key={tech} />
+            <img src={tech} className="" key={tech} />
         ))}</div>
       </ParallaxText>
       {/* <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText> */}

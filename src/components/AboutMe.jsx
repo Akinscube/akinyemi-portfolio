@@ -51,7 +51,7 @@ const AboutMe = () => {
 
   return (
     <div id="about-me" className="reveal-container">
-      <div className="pt-48 bg-white relative mt-[-1px] ">
+      <div className="pt-40 bg-white relative mt-[-1px] ">
         <div className="!mb-[7.8rem] custom-container">
           <motion.div
           initial={{opacity: 0, x: -50}}
@@ -59,55 +59,47 @@ const AboutMe = () => {
           transition={{duration:2, ease:'easeInOut'}}
           viewport={{ once: true }}
           >
-          <p className="font-tnr opacity-100 !text-[16px] italic">
-            What you can expect from me:
+          <p className="font-tnr opacity-100 !text-[18px] italic">
+            About me:
           </p>
           <div className="mb-32 fs-4rm mt-8 about-me-title am-text text-reveal">
             {isXsScreen ? (
               <>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue1 }} ref={containerRef1} className="am-reveal reveal relative block">
-                  I am a versatile professional skilled in
+                I'm a skilled professional in software
                 </motion.div>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue2 }} ref={containerRef2} className="am-reveal reveal relative block">
-                  software development and creative
+                development and creative design,
                 </motion.div>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue3 }} ref={containerRef3} className="am-reveal reveal relative block">
-                  design. With expertise in TypeScript,
+                specializing in efficient, scalable, and
                 </motion.div>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue4 }} ref={containerRef4} className="am-reveal reveal relative block">
-                  JavaScript, React, and Node.js,
+                user-friendly solutions using
                 </motion.div>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue5 }} ref={containerRef5} className="am-reveal reveal relative block">
-                  I specialize in creating efficient,
+                TypeScript, JavaScript, and React.
                 </motion.div>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue6 }} ref={containerRef6} className="am-reveal reveal relative block">
-                  scalable, and user-friendly solutions.
+                Check out my portfolio to see how we
                 </motion.div>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue7 }} ref={containerRef7} className="am-reveal reveal relative block">
-                  Explore my portfolio to see how we
-                </motion.div>
-                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue8 }} ref={containerRef8} className="am-reveal reveal relative block">
-                  can achieve your goals together!
+                can achieve your goals together!
                 </motion.div>
               </>
             ) : (
               <>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue1 }} ref={containerRef1} className="am-reveal reveal relative block">
-                  I am a versatile professional skilled in software development
+                I'm a skilled professional in software development and creative
                 </motion.div>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue2 }} ref={containerRef2} className="am-reveal reveal relative block">
-                  and creative design. With expertise in TypeScript, JavaScript,
+                design, specializing in efficient, scalable, and user-friendly
                 </motion.div>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue3 }} ref={containerRef3} className="am-reveal reveal relative block">
-                  React, and Node.js, I specialize in creating efficient,
-                  scalable,
+                solutions using TypeScript, JavaScript, and React. Check out
                 </motion.div>
                 <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue4 }} ref={containerRef4} className="am-reveal reveal relative block">
-                  and user-friendly solutions. Explore my portfolio to see how
-                  we
-                </motion.div>
-                <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue5 }} ref={containerRef5} className="am-reveal reveal relative block">
-                  can achieve your goals together!
+                my portfolio to see how we can achieve your goals together!
                 </motion.div>
               </>
             )}
@@ -125,13 +117,13 @@ const AboutMe = () => {
                   <div data-aos="fade-up" data-aos-duration="1000" className="">
                     <p
                       className={`mt-0 font-tnr italic mb-[0.5rem] ${
-                        isXsScreen ? "!text-[12.8px]" : ""
+                        isXsScreen ? "!text-[16px]" : " flex justify-end"
                       }`}
                     >
                       {" "}
-                      All services
+                      Background:  
                     </p>
-                    <ul>
+                    {/* <ul>
                       <li className="mb-[0.325rem]">
                         <p className="m-0 fw-300">
                           1. Frontend Development: Website, landing page
@@ -140,7 +132,7 @@ const AboutMe = () => {
                       <li className="mb-[0.325rem]">
                         <p className="m-0 fw-300">2. Brand Design</p>
                       </li>
-                    </ul>
+                    </ul> */}
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-8 col-sm-8 col-xs-12">

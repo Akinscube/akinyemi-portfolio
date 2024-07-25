@@ -25,7 +25,7 @@ const projects = [
     },
 ]
 
-const techs = [reactjs, nextjs, restApi, redux, tailwind, git, typeScript, mui, framerMotion, threejs, nodejs, javaScript, sass, css, html, ps, lrc, cdr]
+const techs = [reactjs, nextjs, redux, tailwind, javaScript, typeScript]
 
 
 export {projects, techs}

@@ -2,7 +2,8 @@ import React from "react";
 import { styles } from "../styles";
 import Marquee from "react-fast-marquee";
 import SkillsParallax from "./SkillsParallax";
-import { gitHub, twitter, whatsApp } from "../assets";
+import { gitHub, twitter, twitterWhiteIcon, whatsApp, whatsAppWhite } from "../assets";
+import { techs } from "../constants";
 
 const Hero = () => {
 
@@ -27,17 +28,17 @@ const Hero = () => {
               </div>
               <div className="social-list">
                 <a className="hover:underline relative inline-block" target='_blank' href="https://github.com/Akinscube">
-                  <img src={gitHub} className="hover-animation-word max-h-[20px]" alt="GitHub" />
+                  <img src={gitHub} className="hover-animation-word max-h-[27px]" alt="GitHub" />
                 </a>
               </div>
               <div className="social-list">
                 <a className="hover:underline relative inline-block" target='_blank' href="https://wa.me/8130341622">
-                <img src={whatsApp} className="hover-animation-word max-h-[20px]" alt="WhatsApp" />
+                <img src={whatsAppWhite} className="hover-animation-word max-h-[27px]" alt="WhatsApp" />
                 </a>
               </div>
               <div className="social-list">
                 <a className="hover:underline relative inline-block" target='_blank' href="https://x.com/akins_devs">
-                <img src={twitter} className="hover-animation-word max-h-[20px]" alt="X" />
+                <img src={twitterWhiteIcon} className="hover-animation-word max-h-[27px]" alt="X" />
                 </a>
               </div>
             </div>
@@ -47,7 +48,10 @@ const Hero = () => {
       <div id="hero-marquee" className="">
         <div className="hero-marquee">
           <div className="hero-marquee-inner text-[#fff]">
-            <SkillsParallax />
+          <div className="flex justify-evenly items-center">{techs.map(tech => (
+            <img src={tech} className="max-h-[32px]" key={tech} />
+        ))}</div>
+            {/* <SkillsParallax /> */}
             {/* <Marquee pauseOnHover={true} speed={90} >
                 <ul className="marquee-container">
             {marqueeItems.map((item, index) => (

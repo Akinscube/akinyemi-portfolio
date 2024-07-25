@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { motion } from "framer-motion";
 import useScrollAnimation from "../../utils/useScrollFillAnimation";
-import { gitHub, gitHubBlack, twitterBlack, whatsAppGreen } from '../assets';
+import { gitHub, gitHubBlack, twitterBlack, twitterBlackIcon, whatsAppBlack, whatsAppGreen } from '../assets';
 
 const Contact = () => {
 
@@ -44,7 +44,32 @@ const { containerRef: containerRef1, bgValue: bgValue1 } =
                 </p>
                 <div className="touch-title text-reveal fs-4rm fw-400">
                     <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue1 }} ref={containerRef1} className="reveal relative"><p className="m-0">Got a project in mind?</p></motion.div>
-                    <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue2 }} ref={containerRef2} className="reveal relative"><p className="m-0">Let&apos;s talk</p></motion.div>
+                        <motion.div style={{ backgroundSize: "200% 100%", backgroundPositionX: bgValue2 }} ref={containerRef2} className="reveal flex relative"><p className="m-0">Let&apos;s talk</p>
+                        <div className="akin-btn">
+                        <a href="mailto:akinyemi.akinlabi@rocketmail.com">
+                      <span className="akin-btn-icon ml-[1.95rem] magnetic" style={{height:'4rem', width:'4rem'}}>
+                        <div className="btn-fill"> </div>
+                        <div className="btn-text">
+                          <div className="btn-text-inner">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M7.5 4.5V6H16.9425L4.5 18.4425L5.5575 19.5L18 7.0575V16.5H19.5V4.5H7.5Z"
+                                fill="#1A1A1A"
+                                style={{ fill: "rgb(28, 29, 32)" }}
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </span>
+                    </a>
+                    </div>
+                    </motion.div>
                 </div>
                 <div className="line my-[5.2rem]"></div>
                 <div className="touch-contact fw-300">
@@ -67,17 +92,17 @@ const { containerRef: containerRef1, bgValue: bgValue1 } =
                                 <ul>
                                     <li>
                                         <a target='_blank' href="https://github.com/Akinscube">
-                                        <img className='max-h-[20px]' src={gitHubBlack} alt="GitHub" />
+                                        <img className='max-h-[27px]' src={gitHubBlack} alt="GitHub" />
                                         </a>
                                     </li>
                                     <li>
                                         <a target='_blank' href="https://wa.me/8130341622">
-                                        <img className='max-h-[20px]' src={whatsAppGreen} alt="WhatsApp" />
+                                        <img className='max-h-[27px]' src={whatsAppBlack} alt="WhatsApp" />
                                         </a>
                                     </li>
                                     <li>
                                         <a target='_blank' href="https://x.com/akins_devs" >
-                                        <img className='max-h-[20px]' src={twitterBlack} alt="X" />
+                                        <img className='max-h-[27px]' src={twitterBlackIcon} alt="X" />
                                         </a>
                                     </li>
                                 </ul>
